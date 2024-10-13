@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Event Checker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Select a Global Event</h1>
+        <form action="/check_routes" method="POST" class="text-center">
+            <div class="form-group">
+                <label for="global_event">Choose an event:</label>
+                <select name="global_event" id="global_event" class="form-control">
+                    <option value="earthquake_china">Earthquake in China</option>
+                    <option value="iran_israel_war">Iran-Israel War</option>
+                    <option value="panama_canal_block">Panama Canal Block</option>
+                    <option value="malacca_strait_tension">Tensions in the Strait of Malacca</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Check Routes</button>
+        </form>
+
+        <!-- Flex container for the image -->
+
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

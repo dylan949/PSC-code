@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Results</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Route Results</h1>
+
+        <h2 class="mt-4">Affected Ports</h2>
+        <ul class="list-group mb-4">
+            {% for port in affected_ports %}
+                <li class="list-group-item">{{ port }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2 class="mt-4">Relevant Ships</h2>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Ship Number</th>
+                    <th>Cargo</th>
+                    <th>Departure Port</th>
+                    <th>Arrival Port</th>
+                    <th>Choke Points</th>
+                    <th>Status</th>
+                    <th>Recommended Course of Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ship in relevant_ships %}
+                    <tr>
+                        <td>{{ ship.ship_name }}</td>
+                        <td>{{ ship.cargo }}</td>
+                        <td>{{ ship.departure_port }}</td>
+                        <td>{{ ship.arrival_port }}</td>
+                        <td>{{ ship.choke_points | join(', ') }}</td>
+                        <td>{{ ship.Status }}</td>
+                        <td>{{ ship.Recommended_Course_of_Action }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
